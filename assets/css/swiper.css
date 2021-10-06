@@ -89,12 +89,12 @@
 
 .swiper-button-prev {
     outline: none;
-    transform: translateX(-2.5rem);
+    transform: translateX(-2rem);
 }
 
 .swiper-button-next {
     outline: none;
-    transform: translateX(2.5rem);
+    transform: translateX(2rem);
 }
 
 .swiper__icon__prev:hover {
