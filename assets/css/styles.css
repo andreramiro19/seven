@@ -275,12 +275,6 @@ img{
 }
 
 /*========================================================================================== HOME ==========================================================================================*/
-.home__color {
-    background: #FF9E71;
-    padding: 0 0;
-    width: 100%;
-}
-
 .home__blob {
     width: 60%;
     position: absolute;
@@ -294,6 +288,7 @@ img{
     display: grid;
     gap: 1rem;
     margin-bottom: 100px;
+    background: hotpink;
 }
 
 .home__content {

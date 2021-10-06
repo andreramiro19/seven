@@ -81,20 +81,23 @@
                         <div class="home__img scroll-home-img">
                             <img src="assets/img/home-img.png" alt="" class="seven__img">                            
                         </div>
-                    </div>
-
-                    <div class="mouse__grid">
-                        <div class="mouse__icon" id="mouse-hover">
-                            <div class="home__scroll scroll-home-mouse">
-                                <a href="#ofertas" class="home__scroll-button button--flex">
-                                    <i class="uil uil-mouse-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
             </section>
 
+            <div class="mouse__container">
+                <div class="mouse__grid">
+                    <div class="mouse__icon" id="mouse-hover">
+                        <div class="home__scroll scroll-home-mouse">
+                            <a href="#ofertas" class="home__scroll-button button--flex">
+                                <lottie-player src="assets/img/mouse.json" background="transparent" style="width: 60px;" speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+                                <!--<i class="uil uil-mouse-alt"></i>-->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!--============================================================================= OFERTAS =============================================================================-->
             <section class="ofertas section" id="ofertas">
                 <h2 class="ofertas__title scroll-ofertas--title">As melhores ofertas para você!</h2>
@@ -157,10 +160,48 @@
                         </div>
                     </div>
                 </div>
+            </section>            
+
+            <!--============================================================================= LOJA =============================================================================-->
+            <section class="loja section" id="loja">
+                <h2 class="loja__title">Nossa loja</h2>
+
+                <div class="loja__container container grid">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper__card">
+                                <div class="swiper__card__top">
+                                    <img src="assets/img/img1.PNG" class="swiper__card__img"></img>
+                                </div>
+                                <div class="swiper__card__data">
+                                    <div class="swiper__data__title">iPhone 12 Pro</div>
+                                    <div class="swiper__data__desc">Iphone 12 Pro Max Apple (512gb) Grafite Tela 6,7" Câmera Tripla 12mp Ios</div>
+                                </div>
+                                <div class="swiper__card__price">
+                                    <div class="swiper__price">R$ 5.999,00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                        </div>                        
+                    </div>
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper__icon__next"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper__icon__prev"></i>
+                    </div>
+                </div>
             </section>
-
-            
-
             <!--============================================================================= SOBRE =============================================================================-->
             <section class="sobre section" id="sobre">
                 <h2 class="sobre__title">Sobre nós</h2>

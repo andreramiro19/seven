@@ -6,36 +6,23 @@ var scrollOfertasTitle = {
 }
 
 var card1 = {
-    distance: '50%',
-    origin: 'left',
     duration: 1500,
     opacity: 0
 };
 
 var card2 = {
     delay: 200,
-    distance: '50%',
-    origin: 'bottom',
     duration: 1500,
     opacity: 0
 };
 
 var card3 = {
     delay: 400,
-    distance: '50%',
-    origin: 'right',
     duration: 1500,
     opacity: 0
 };
 
 // ======================================== HOME ======================================== //
-var scrollHomeBlob = {
-    distance: '100%',
-    origin: 'top',
-    duration: 2000,
-    opacity: 0
-}
-
 var scrollHomeImg = {
     delay: 200,
     distance: '100%',
@@ -78,7 +65,6 @@ var scrollHomeMouse = {
 };
 
 // ==================== HOME ==================== //
-ScrollReveal().reveal('.scroll-home-blob', scrollHomeBlob);
 ScrollReveal().reveal('.scroll-home-title', scrollHomeTitle);
 ScrollReveal().reveal('.scroll-home-subtitle', scrollHomeSubtitle);
 ScrollReveal().reveal('.scroll-home-button', scrollHomeButton);
