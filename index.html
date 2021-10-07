@@ -24,7 +24,8 @@
         <!--============================================================================= HEADER =============================================================================-->        
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Seven</a>
+                <img src="assets/img/logo.png" alt="Logo Seven Tecnologia" class="nav__img__logo">
+                <a href="#" class="nav__logo">Seven Tecnologia</a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -71,9 +72,24 @@
         <!--============================================================================= MAIN =============================================================================-->
         <main class="main">
             <!--============================================================================= HOME =============================================================================-->
-            <section class="home section" id="home">
+            <section class="home section" id="home">                
                 <div class="home__container container grid">
-                    <div class="home__content grid">
+                    <div class="teste"></div>
+                    <!--==================== SOCIAL ====================-->
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/andreramiro19/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/andre_ramiro_/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+
+                        <a href="https://github.com/andreramiro19" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+                    <div class="home__content grid">                        
                         <div class="home__data">                                
                             <h1 class="home__title scroll-home-title">Seu novo aparelho está aqui!</h1>
                             <h3 class="home__subtitle scroll-home-subtitle">Monte seu pc novo com a gente, também temos os melhores preços em tablets e celulares</h3>                                
@@ -268,7 +284,10 @@
                     <div class="swiper-button-prev">
                         <i class="uil uil-angle-left-b swiper__icon__prev"></i>
                     </div>
-                </div>
+                    <div class="ver__mais__btn">
+                        <a href="http://www.instagram.com" class="ver__mais">Ver mais +</a>
+                    </div>                    
+                </div>                
             </section>
             <!--============================================================================= SOBRE =============================================================================-->
             <section class="sobre section" id="sobre">
@@ -276,11 +295,26 @@
 
                 <div class="sobre__color">
                     <div class="sobre__container container grid">
-
+                        <div class="sobre__data">
+                            <p class="sobre__info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut modi placeat aut dolorem molestiae, nobis blanditiis velit tempora ducimus numquam laudantium repellendus. Alias inventore eveniet iure? Natus, odit laboriosam?</p>
+                        </div>
+                        <div class="sobre__img">
+                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_5o8zf8kq.json" background="transparent" speed="1"  style="width: 300px; height: 300px;" class="sobre__anim" loop autoplay></lottie-player>
+                        </div>
+                        <div class="sobre__btn">
+                            <button href="#" class="sobre__button">
+                                Conhecer
+                                <i class="uil uil-message button__icon"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
 
+            <!--============================================================================= SOBRE =============================================================================-->
+            <section class="contato section" id="contato">
+                <h2 class="contato__title">Contato</h2>
+            </section>
             
 
         </main> 
@@ -305,6 +339,7 @@
         <script src="assets/js/scroll-reveal.js"></script>
 
         <!--============================= SCROLL REVEAL =============================-->
+        <!--
         <script>
             var hover = document.getElementById('mouse-hover');
 
@@ -318,6 +353,6 @@
             });
 
         </script>
-        
+        -->
     </body>
 </html>

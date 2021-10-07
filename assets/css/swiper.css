@@ -64,15 +64,13 @@
 
 .swiper__card__price {
     display: grid;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    align-content: space-between;
 }
 
 .swiper__price {
     text-align: center;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #FF9E71;
 }
 
