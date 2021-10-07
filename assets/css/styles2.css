@@ -90,7 +90,7 @@ body.dark-theme{
 
 .change-theme{
     font-size: 1.25rem;
-    color: var(--title-color);
+    color: #FFFFFF;
     margin-right: var(--mb-1);
     cursor: pointer;
 }
@@ -172,10 +172,10 @@ img{
 .header{
     width: 100%;
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--body-color);
+    background-color: var(--first-color);
 }
 
 /*==================== NAV ====================*/
@@ -189,7 +189,7 @@ img{
 
 .nav__logo,
 .nav__toggle{
-    color: var(--title-color);
+    color: #FFFFFF;
     font-weight: var(--font-medium);    
 }
 
@@ -209,13 +209,13 @@ img{
 @media screen and (max-width: 767px) {
     .nav__menu{
         position: fixed;
-        bottom: -100%;
+        top: -100%;
         left: 0;
         width: 100%;
-        background-color: var(--body-color);
-        padding: 2rem 1.5rem 4rem;
+        background-color: var(--first-color);
+        padding: 4rem 1.5rem 2rem;
         box-shadow: 0 -1px 4px rgba(0,0,0,.15);
-        border-radius: 1.5rem 1.5rem 0 0;
+        border-radius: 0 0 1.5rem 1.5rem;
         transition: .3s;
     }
 }
@@ -230,7 +230,7 @@ img{
     flex-direction: column;
     align-items: center;
     font-size: var(--small-font-size);
-    color: var(--title-color);
+    color: #FFFFFF;
     font-weight: var(--font-medium);
 }
 
@@ -244,11 +244,11 @@ img{
 
 .nav__close{
     position: absolute;
-    right: 1.3rem;
-    bottom: .5rem;
+    right: 1.4rem;
+    top: .7rem;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--first-color);
+    color: #FFFFFF;
 }
 
 .nav__close:hover{
@@ -257,12 +257,12 @@ img{
 
 /* Show menu */
 .show-menu{
-    bottom: 0;
+    top: 0;
 }
 
 /* Active menu */
 .active-link{
-    color: var(--first-color);
+    color: #003049;
 }
 
 /* Change background header */
@@ -458,7 +458,7 @@ img{
     }
 
     .nav__menu{
-        padding: 2rem .25rem 4rem;
+        padding: 4rem .25rem 2rem;
     }
 
     .nav__list{
