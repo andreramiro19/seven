@@ -1,3 +1,48 @@
+// ======================================== HOME ======================================== //
+var scrollHomeImg = {
+    delay: 200,
+    distance: '100%',
+    origin: 'left',
+    duration: 1200,
+    opacity: 0
+};
+
+var scrollHomeTitle = {
+    delay: 400,
+    duration: 1200,
+    opacity: 0
+};
+
+var scrollHomeSubtitle = {
+    delay: 1000,
+    duration: 1200,
+    opacity: 0
+};
+
+var scrollHomeMouse = {
+    delay: 1200,
+    distance: '200%',
+    origin: 'top',
+    duration: 1500,
+    opacity: 0
+};
+
+var scrollHomeSocial1 = {
+    delay: 1500,
+    duration: 1500,
+    opacity: 0
+}
+var scrollHomeSocial2 = {
+    delay: 1600,
+    duration: 1500,
+    opacity: 0
+}
+var scrollHomeSocial3 = {
+    delay: 1700,
+    duration: 1500,
+    opacity: 0
+}
+
 // ======================================== OFERTAS ======================================== //
 var scrollOfertasTitle = {
     delay: 100,
@@ -22,55 +67,14 @@ var card3 = {
     opacity: 0
 };
 
-// ======================================== HOME ======================================== //
-var scrollHomeImg = {
-    delay: 200,
-    distance: '100%',
-    origin: 'left',
-    duration: 1200,
-    opacity: 0
-};
-
-var scrollHomeAnim = {
-    delay: 200,
-    duration: 2200,
-    opacity: 0
-}
-
-var scrollHomeTitle = {
-    delay: 400,
-    duration: 1200,
-    opacity: 0
-};
-
-var scrollHomeSubtitle = {
-    delay: 1000,
-    duration: 1200,
-    opacity: 0
-};
-
-var scrollHomeButton = {
-    delay: 1200,
-    distance: '50%',
-    duration: 1200,
-    opacity: 0
-};
-
-var scrollHomeMouse = {
-    delay: 1200,
-    distance: '100%',
-    origin: 'top',
-    duration: 1500,
-    opacity: 0
-};
-
 // ==================== HOME ==================== //
-ScrollReveal().reveal('.scroll-home-title', scrollHomeTitle);
-ScrollReveal().reveal('.scroll-home-subtitle', scrollHomeSubtitle);
-ScrollReveal().reveal('.scroll-home-button', scrollHomeButton);
-ScrollReveal().reveal('.scroll-home-img', scrollHomeImg);
-ScrollReveal().reveal('.scroll-home-anim', scrollHomeAnim);
-ScrollReveal().reveal('.scroll-home-mouse', scrollHomeMouse);
+ScrollReveal().reveal('.home__title', scrollHomeTitle);
+ScrollReveal().reveal('.home__subtitle', scrollHomeSubtitle);
+ScrollReveal().reveal('.home__media', scrollHomeImg);
+ScrollReveal().reveal('.home__scroll', scrollHomeMouse);
+ScrollReveal().reveal('.scroll__social1', scrollHomeSocial1);
+ScrollReveal().reveal('.scroll__social2', scrollHomeSocial2);
+ScrollReveal().reveal('.scroll__social3', scrollHomeSocial3);
 
 // ==================== OFERTAS ==================== //
 ScrollReveal().reveal('.scroll-ofertas--title', scrollOfertasTitle);

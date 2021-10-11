@@ -1,7 +1,7 @@
 var swiper = new Swiper(".mySwiper", {
     cssMode: true,
     slidesPerView:'auto',
-    spaceBetween: 15,
+    spaceBetween: 5,
     grabCursor: true,
     
     navigation: {

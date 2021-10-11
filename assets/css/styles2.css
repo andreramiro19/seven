@@ -791,8 +791,21 @@ img{
         padding: 0;
     }
 
-    .home__blob{
-        width: 320px;
+    .home2__container {
+        display: grid;
+        width: 100%;
+    }
+
+    .home2__info {
+        width: 600px;
+        height: 600px;
+        background: darkseagreen;
+    }
+
+    .home2__img {
+        width: 600px;
+        height: 600px;
+        background: cadetblue;
     }
 
     .home__social{
@@ -849,10 +862,14 @@ img{
     .home__social{
         position: absolute;
         display: grid;
-        top: 28%;
+        
         grid-template-columns: max-content;
         row-gap: 1rem;
         left: 10%;
+    }
+
+    .nav__logo {
+        display: none;
     }
 
     .nav__img__logo {
