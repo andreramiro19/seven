@@ -438,7 +438,7 @@ a {
     .home__scroll {
         display: grid;
         justify-content: center;
-        margin-top: 40px;
+        margin-top: 100px;
     }
 }
 
@@ -563,7 +563,7 @@ a {
 
 @media screen and (min-width: 993px) {
     .ofertas__title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -575,8 +575,8 @@ a {
 }
 
 .loja__title {
-    margin-bottom: 100px;
     padding: 0 1rem;
+    text-align: center;
 }
 
 .loja__container {
@@ -586,7 +586,7 @@ a {
     gap: 1rem;
     position: relative;
     padding: 1px;
-    max-width: 768px;
+    max-width: 1200px;
 }
 
 .ver__mais {
@@ -603,8 +603,401 @@ a {
 /*==================== Media Queries ====================*/
 
 /*==================== Mobile ====================*/
-@media screen and (max-width: 846px) {
+@media screen and (max-width: 1300px) {
     .swiper__icon__prev, .swiper__icon__next {
         display: none;
     }
+
+    .loja__container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 846px) {
+    .loja__container {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .loja__container {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .loja__container {
+        max-width: 200px;
+    }
+}
+
+/*==================== Desktop ====================*/
+
+@media screen and (min-width: 993px) {
+    .loja__title {
+        font-size: 1.8rem;
+    }
+}
+
+/*============================================================ SOBRE ============================================================*/
+.sobre__section {
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 6rem 0 2rem;
+}
+
+.sobre__title {
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.sobre__color {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    background: #FF9E71;
+}
+
+.sobre__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 968px;
+    margin: 100px 0;
+    padding: 0 20px;
+    column-gap: 10px;
+}
+
+.sobre__info {
+    display: grid;
+    justify-items: start;
+    align-content: center;
+}
+
+.info__title {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+
+.info__desc {
+    color: #FFFFFF;
+}
+
+.sobre__img img {
+    width: 400px;
+    height: auto;
+}
+
+/*==================== Media Queries ====================*/
+
+/*==================== Mobile ====================*/
+@media screen and (max-width: 777px) {
+    .sobre__container {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .sobre__info {
+        text-align: center;
+        justify-items: center;
+        margin-bottom: 20px;
+    }
+    .sobre__img img{
+        width: 300px;
+    }
+}
+
+/*============================================================ SERVIÇOS ============================================================*/
+.servicos__section {
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 6rem 0 2rem;
+}
+
+.servicos__title {
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.servicos__color {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    background: #FF9E71;
+}
+
+.servicos__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 968px;
+    margin: 100px 0;
+    padding: 0 20px;
+    column-gap: 10px;
+}
+
+.servicos__data {
+    display: grid;
+    justify-items: start;
+    align-content: center;
+}
+
+.data__title {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+
+.data__desc {
+    color: #FFFFFF;
+}
+
+.servicos__img img {
+    width: 400px;
+    height: auto;
+}
+
+/*==================== Media Queries ====================*/
+
+/*==================== Mobile ====================*/
+@media screen and (max-width: 777px) {
+    .servicos__container {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .servicos__data {
+        text-align: center;
+        justify-items: center;
+        margin-bottom: 20px;
+    }
+    .servicos__img img{
+        width: 300px;
+    }
+}
+
+/*============================================================ CONTATO ============================================================*/
+.contact__section {
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 2rem 0 4rem;
+}
+
+.contact__title{
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact__container{
+    display: grid;
+    row-gap: 3rem;
+    gap: 1.5rem;
+    max-width: 768px;
+    margin: 0 1.5rem;
+}
+
+.contact__information{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.contact__icon{
+    font-size: 1.8rem;
+    color: #fa9500;
+    margin-right: 0.75rem;
+}
+
+.contact__title1{
+    text-align: start;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact__subtitle{
+    font-size: .95rem;
+    text-align: start;
+}
+
+.contact__content{
+    background-color: #ffdac6;
+    border-radius: .5rem;
+    padding: .75rem 1rem 1rem;
+}
+
+.contact__form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact__label{
+    font-size: 0.95rem;
+    color: #3a3a3c;
+}
+
+.contact__inputs {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact__input{
+    width: 100%;
+    background-color: #ffdac6;
+    color: #240046;
+    font-size: .95rem;
+    border: none;
+    outline: none;
+    padding: .5rem .5rem .5rem 0;
+}
+
+.contact__button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fa9500;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: 600;
+}
+
+/*==================== Media Queries ====================*/
+
+/*==================== Mobile ====================*/
+@media screen and (min-width: 1024px) {
+    .contact__section {
+        padding: 6rem 0 2rem;
+    }
+    .contact__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact__form {
+        width: 460px;
+    }
+
+    .contact__inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/*============================================================ FOOTER ============================================================*/
+.footer{
+    padding-top: 2rem;
+}
+
+.footer__container{
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.footer__bg{
+    background-color: #FF9E71;
+    padding: 2rem 0 3rem;
+}
+
+.footer__title{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.footer__subtitle{
+    font-size: var(--small-font-size);
+}
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.footer__link:hover{
+    color: var(--first-color-lighter);
+}
+
+.footer__social{
+    font-size: 1.25rem;
+    margin-right: var(--mb-1-5);
+}
+
+.footer__social:hover{
+    color: var(--first-color-lighter);
+}
+
+.footer__copy{
+    font-size: var(--smaller-font-size);
+    text-align: center;
+    color: var(--text-color-light);
+    margin-top: var(--mb-3);
+}
+
+.footer__title,
+.footer__subtitle,
+.footer__link,
+.footer__social{
+    color: #FFF;
+}
+
+/*==================== Media Queries ====================*/
+
+/*==================== Mobile ====================*/
+@media screen and (min-width: 768px){
+    .footer__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*========== SCROLL UP ==========*/
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: #FF5500;
+    opacity: .8;
+    padding: 0 .6rem;
+    border-radius: .4rem;
+    z-index: 666;
+    transition: .4s;
+}
+
+.scrollup:hover{
+    background-color: var(--first-color-alt);
+}
+
+.scrollup__icon{
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+/* Show scroll */
+.show-scroll{
+    bottom: 5rem;
+}
+
+/*========== SCROLL BAR ==========*/
+::-webkit-scrollbar{
+    width: .60rem;
+    background-color: #FF9E71;
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #FF5500;
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #FF5500;
 }
