@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--============================= BOXICONS =============================-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--============================= JQUERY =============================-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--============================= NORMALIZE CSS =============================-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <!--============================= CSS =============================-->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+    <title>Login</title>
+</head>
+<body>
+    <div class="login__container">
+        <form action="">
+            <h3>Login</h3>
+            <div class="input__div">
+                <input id="email" type="email" placeholder="Email">
+                <i class='bx bxs-user-pin'></i>
+            </div>
+            <div class="input__div">
+                <input id="password" type="password" placeholder="Password">
+                <i class='bx bxs-key'></i>
+            </div>
+        </form>
+        <div>
+            <button id="btn-login">Acessar</button>
+            <i></i>
+        </div>
+        <a href="index.html" class="voltar">Ir para a página principal.</a>
+
+        <!-- <br><br>
+        <button id="btn-logout">Logout</button> -->
+    </div>
+
+
+
+    <!--============================= FIREBASE =============================-->
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/login.js"></script>
+
+    <script>
+        firebase.auth().signOut().then(() => {
+        // Sign-out successful.
+        alert("você se deslogou")
+      }).catch((error) => {
+        // An error happened.
+      });
+    </script>
+
+    <script>
+        firebase.auth().onAuthStateChanged( (user) => {
+            if(user) {
+                alert("VOCE ESTÁ LOGADO!")
+                window.location.href = "seven-admin.html"
+            }
+            else {
+                alert("nao sei mais o q ta acontecendo aqui")
+            }
+        })
+    </script>
+
+</body>
+</html>

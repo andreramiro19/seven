@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ==================== BOXICONS ====================-->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ==================== CSS ====================-->
+    <!-- <link rel="stylesheet" href="assets/css/teste.css"> -->
+    <link rel="stylesheet" href="assets/css/seven-admin.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bxl-apple'></i></span>
+                        <span class="title">Seven Tecnologia</span>
+                    </a>
+                </li>
+                <li id="btn-ofertas">
+                    <a href="#">
+                        <span class="icon"><i class='bx bxs-dashboard' ></i></span>
+                        <span class="title">Ofertas</span>
+                    </a>
+                </li>
+                <li id="btn-loja">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-customize' ></i></span>
+                        <span class="title">Loja</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-message-dots' ></i></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-help-circle' ></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li id="btn-logout">
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-log-out-circle'></i></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ======================================== MAIN ========================================-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class='bx bx-menu' ></i>
+                </div>
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="Search Here" id="search-input">
+                        <i class='bx bx-search' ></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="assets/img/user.png" alt="">
+                </div>
+            </div>
+
+            <!-- ======================================== OFERTAS ========================================-->
+            <section class="section__ofertas" id="section-ofertas">
+                <div class="ofertas">
+                    <h2 class="ofertas__title">Cadastrar nova oferta</h2>
+                    <form id="task-form">
+                        <div class="ofertas__container">
+                            <div class="ofertas__img" id="select-img">
+                                <img id="task-image" src="assets/img/noImg.png" alt="" class="img">
+                                <input type="file" name="" id="file-img" class="input__img" accept="image/*" onchange="previewImage();">
+                            </div>
+                            <div class="ofertas__data">
+                                <input type="text" id="task-title" class="of__title" placeholder="Título">
+                                <textarea name="" id="task-description" rows="3" class="of__desc" placeholder="Descrição"></textarea>
+                            </div>
+                            <div class="ofertas__price">
+                                <input type="text" id="task-price" class="of__price" placeholder="Valor">
+                                <button id="btn-task-form" class="of__button">Salvar</button>
+                            </div>
+                        </div>
+                    </form>                
+                </div>
+    
+                <input id="imagem-url" class="imagem__url"></input>
+                <img src="" alt="" id="image-display">
+                <h2 class="ofertas__title">Ofertas</h2>
+                <button id="qlqr-botao" class="qlqr__botao">botão qualquer</button>
+                <div class="tasks">
+                    <div class="tasks__container" id="tasks-container"></div>
+                </div>
+
+                <tbody id="tablenames">
+
+                </tbody>
+            </section>
+
+            <!-- ======================================== LOJA ========================================-->
+            <section class="section__loja" id="section-loja">
+                <div class="loja">
+                    <h2 class="ofertas__title">Cadastrar novo produto</h2>
+                    <form id="task-form">
+                        <div class="ofertas__container">
+                            <div class="ofertas__img" id="select-img">
+                                <img id="task-image" src="assets/img/noImg.png" alt="" class="img">
+                                <input type="file" name="" id="file-img" class="input__img" accept="image/*" onchange="previewImage();">
+                            </div>
+                            <div class="ofertas__data">
+                                <input type="text" id="task-title" class="of__title" placeholder="Título">
+                                <textarea name="" id="task-description" rows="3" class="of__desc" placeholder="Descrição"></textarea>
+                            </div>
+                            <div class="ofertas__price">
+                                <input type="text" id="task-price" class="of__price" placeholder="Valor">
+                                <button id="btn-task-form" class="of__button">Salvar</button>
+                            </div>
+                        </div>
+                    </form>                
+                </div>
+    
+                <input id="imagem-url" class="imagem__url"></input>
+                <img src="" alt="" id="image-display">
+                <h2 class="ofertas__title">Ofertas</h2>
+                <div class="tasks">
+                    <div class="tasks__container" id="tasks-container"></div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <form id="task-form">
+        <div class="form__container">
+            
+            <div class="column2">
+                <img id="task-image" src="" alt="">
+                <input id="imagem-url" class="imagem__url"></input>
+                <input type="text" id="task-title" class="form__control" placeholder="Task Title">
+                <textarea name="" id="task-description" rows="3" placeholder="Task Description"></textarea>
+                <input type="text" id="task-price" class="form__control" placeholder="Task Price">
+                <button id="btn-task-form" class="task__button">Save</button>
+            </div>
+            <div class="column3">
+                <img class="image__display" id="image-display" src="" alt="">
+            </div>
+            
+        </div>
+    </form>
+
+    <div class="column3" style="margin-top: 50px;">
+        <input type="file" name="" id="select-img">
+        <button id="upload-img">Upload</button>
+        <div class="progress-bar" id="upload-progress"></div>
+        
+        <img id="imagem-url2" src="" alt="">
+    </div>
+
+    <button id="btn-logout" class="logout">LOGOUT</button>  
+    
+    <h1>Hello World</h1>
+
+    <div class="tasks__container" id="tasks-container"></div>
+
+
+    <div id="body"></div> -->
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/seven-admin.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+
+    <script>
+        firebase.auth().onAuthStateChanged((user) => {
+            if(!user) {
+                window.location.href = "sv-admin.html"
+                console.log('nao deu certo')
+            }
+            else {
+                console.log('nao deu certo2')
+            }
+        })
+    </script>
+    
+</body>
+</html>

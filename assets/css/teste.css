@@ -1,0 +1,59 @@
+.form__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    width: 600px;
+    padding: 4rem;
+    background: plum;
+}
+
+.column1 {
+    display: grid;
+    gap: 1rem;
+}
+
+.column2 {
+    display: grid;
+    gap: 1rem;
+    width: 200px;
+}
+
+.task__button {
+    height: 60px;
+}
+
+.task__img {
+    width: 100px;
+    height: 100px;
+    background: #FFFFFF;
+}
+
+.profile__img {
+    width: 150px;
+    height: 150px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background: plum;
+}
+
+.qualquer__coisa {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.imagem__url {
+    display: none;
+}
+
+.image__display {
+    width: 200;
+    height: 200px;
+    background: #FFFFFF;
+}
