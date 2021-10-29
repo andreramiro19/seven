@@ -232,6 +232,24 @@ body {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .search {
+        width: 290px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .search {
+        width: 214px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .search {
+        width: 180px;
+    }
+}
+
 /* ================================================== OFERTAS ================================================== */
 .section__ofertas {
     display: block;
@@ -267,7 +285,7 @@ body {
     cursor: pointer;
 }
 
-img#task-image {
+img#task-image, img#task-image2 {
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -310,6 +328,18 @@ input[type='file'] {
     resize: none;
 }
 
+.of__select {
+    margin-top: 0px;
+    width: 125px;
+    height: 40px;
+    margin-bottom: 6px;
+    background: var(--grey);
+    border: none;
+    border-radius: 3px;
+    font-size: .75rem;
+    text-align: center;
+}
+
 .of__price {
     width: 125px;
     height: 36px;
@@ -329,6 +359,45 @@ input[type='file'] {
     border: none;
     font-weight: 600;
     cursor: pointer;
+}
+
+.filtro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.cat__select{
+    margin-left: auto;
+    margin-right: 10px;
+    width: 160px;
+    height: 40px;
+    background: var(--white);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: var(--orange);
+    font-size: .8rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.04);
+}
+
+.cat__all {
+    margin-left: 10px;
+    margin-top: 0px;
+    width: 125px;
+    height: 40px;
+    background: var(--orange);
+    border: none;
+    border-radius: 10px;
+    font-size: .8rem;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.04);
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -393,26 +462,41 @@ color: #747474;
     }   
 }
 
+@media screen and (max-width: 385px) {
+    .filtro {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .cat__select {
+        margin-left: initial;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+}
+
 /* ======================================== CONTEÚDO ======================================== */
 .tasks {
     padding: 10px;
 }
 
-.tasks__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.tasks__section {
     padding: 20px;
     background: var(--grey);
     border-radius: 3px;
+}
+
+.tasks__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .task__card {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     width: 500px;
-    height: 130px;
     margin-bottom: 20px;
-
+    min-height: 130px;
     background: #FFFFFF;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.09);
     border-radius: 3px;
@@ -441,15 +525,24 @@ color: #747474;
 }
 
 .tk__title {
+    width: 100%;
     font-size: 1rem;
     font-weight: 600;
     color: var(--black1);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .tk__desc {
+    width: 100%;
     font-size: .8rem;
     color: var(--black2);
+    max-height: 34px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
+
 
 .tk__price {
     font-size: .9rem;
@@ -506,7 +599,7 @@ color: #747474;
         grid-template-rows: 1fr 2fr 1fr;
         grid-template-columns: 1fr;
         width: 189px;
-        height: 372px;
+        min-height: 372px;
         border-radius: 11px;
         justify-content: center;
         justify-items: center;
@@ -514,6 +607,10 @@ color: #747474;
 
     .task__data {
         text-align: center;
+    }
+
+    .tk__desc {
+        max-height: 90px;
     }
 
     .task__btns {
@@ -524,5 +621,152 @@ color: #747474;
 @media screen and (max-width: 460px) {
     .tasks__container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ================================================== LOJA ================================================== */
+.section__loja {
+    display: none;
+}
+
+.of__select {
+    margin-top: 0px;
+}
+
+.task__data {
+    grid-template-rows: 1fr 1.8fr 1fr 1fr;
+    max-width: 242px;
+}
+
+.tk__category {
+    font-size: .8rem;
+    font-weight: 600;
+    color: coral;
+}
+
+.of__button2 {
+    width: 125px;
+    height: 40px;
+    background: var(--orange);
+    border-radius: 3px;
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.option {
+    padding: 1em;
+    cursor: pointer;
+    background-color: #485761
+}
+
+/* ================================================== CATEGORIAS ================================================== */
+.section__categoria {
+    display: none;
+}
+
+.categoria__container {
+    padding: 20px;
+}
+
+.cat__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+}
+
+.cat__form div {
+    margin-left: auto;
+}
+
+.cat__input {
+    width: 200px;
+    height: 36px;
+    padding: 10px;
+    margin-right: 10px;
+    background: var(--white);
+    border: none;
+    border-radius: 20px;
+    font-size: .8rem;
+    color: var(--black1);
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.04);
+}
+
+.cat__button {
+    width: 130px;
+    height: 36px;
+    padding: 10px;
+    margin-left: 10px;
+    background: var(--orange);
+    border: none;
+    border-radius: 20px;
+    font-size: .8rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+}
+
+.categories__list {
+    display: flex;
+    flex-flow: row wrap;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+.categories__list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.04);
+    border-radius: 10px;
+}
+
+.categories__list h5 {
+    font-size: 0.9rem;
+    padding: 4px 10px 10px 10px;
+    color: var(--black2);
+}
+
+.categories__list li button{
+    background: #E63946;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 400px) {
+    .cat__form {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .cat__form div {
+        margin-left: unset;
+        margin-bottom: 10px;
+    }
+
+    .cat__input {
+        margin-right: unset;
+    }
+
+    .cat__button {
+        margin-left: 0;
     }
 }

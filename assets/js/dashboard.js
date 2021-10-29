@@ -10,23 +10,6 @@ toggle.onclick = () => {
 
 // Search Input
 
-let qlqrBtn = document.getElementById('qlqr-botao');
-
-qlqrBtn.addEventListener('click', () => {
-    var taskContainer = document.getElementById('tasks-container');
-    let tr = taskContainer.querySelectorAll('tr');
-    for (let i = 0; i < tr.length; i++) {
-        let val = tr[i].getElementsByTagName('h3')[0];
-        if(val.innerHTML == "Fonoclinic") {
-            console.log('nao deu certo11')
-        }
-        else {
-            console.log('nao deu certo22')
-        }
-    }
-    console.log('funfou')
-})
-
 let searchInput = document.getElementById("search-input");
 searchInput.addEventListener('keyup', () => {
     let searchValue = document.getElementById("search-input").value;
@@ -68,14 +51,28 @@ let btnOfertas = document.getElementById('btn-ofertas');
 btnOfertas.addEventListener('click', () => {
     console.log('Clicou ofertas')
     document.getElementById("section-ofertas").style.display = "block";
+    document.getElementById("section-loja").style.display = "none";
+    document.getElementById("section-categorias").style.display = "none";
 })
 
-// Ofertas
+// Loja
 let btnLoja = document.getElementById('btn-loja');
 
 btnLoja.addEventListener('click', () => {
     console.log('Clicou loja')
+    document.getElementById("section-loja").style.display = "block";
     document.getElementById("section-ofertas").style.display = "none";
+    document.getElementById("section-categorias").style.display = "none";
+})
+
+// Categorias
+let btnCategorias = document.getElementById('btn-categorias');
+
+btnCategorias.addEventListener('click', () => {
+    console.log('Clicou Categorias')
+    document.getElementById("section-ofertas").style.display = "none";
+    document.getElementById("section-loja").style.display = "none";
+    document.getElementById("section-categorias").style.display = "block";
 })
 
 // Logout
@@ -92,18 +89,4 @@ btnLogout.addEventListener('click', () => {
         // An error happened.
         });
 
-});
-
-
-var docRef = db.collection("loja").doc("wt7Obc0GuQFhVvvfPT4l");
-
-docRef.get().then((doc) => {
-    if (doc.exists) {
-        console.table("Document data:", doc.data());
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-}).catch((error) => {
-    console.log("Error getting document:", error);
 });

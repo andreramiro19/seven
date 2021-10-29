@@ -37,10 +37,10 @@
                         <span class="title">Loja</span>
                     </a>
                 </li>
-                <li>
+                <li id="btn-categorias">
                     <a href="#">
                         <span class="icon"><i class='bx bx-message-dots' ></i></span>
-                        <span class="title">Message</span>
+                        <span class="title">Categorias</span>
                     </a>
                 </li>
                 <li>
@@ -100,9 +100,11 @@
                 <input id="imagem-url" class="imagem__url"></input>
                 <img src="" alt="" id="image-display">
                 <h2 class="ofertas__title">Ofertas</h2>
-                <button id="qlqr-botao" class="qlqr__botao">botão qualquer</button>
+
                 <div class="tasks">
-                    <div class="tasks__container" id="tasks-container"></div>
+                    <div class="tasks__section">
+                        <div class="tasks__container" id="tasks-container"></div>
+                    </div>
                 </div>
 
                 <tbody id="tablenames">
@@ -114,29 +116,63 @@
             <section class="section__loja" id="section-loja">
                 <div class="loja">
                     <h2 class="ofertas__title">Cadastrar novo produto</h2>
-                    <form id="task-form">
+                    <form id="task-form2">
                         <div class="ofertas__container">
-                            <div class="ofertas__img" id="select-img">
-                                <img id="task-image" src="assets/img/noImg.png" alt="" class="img">
-                                <input type="file" name="" id="file-img" class="input__img" accept="image/*" onchange="previewImage();">
+                            <div class="ofertas__img" id="select-img2">
+                                <img id="task-image2" src="assets/img/noImg.png" alt="" class="img">
+                                <input type="file" name="" id="file-img2" class="input__img" accept="image/*" onchange="previewImage2();">
                             </div>
                             <div class="ofertas__data">
-                                <input type="text" id="task-title" class="of__title" placeholder="Título">
-                                <textarea name="" id="task-description" rows="3" class="of__desc" placeholder="Descrição"></textarea>
+                                <input type="text" id="task-title2" class="of__title" placeholder="Título">
+                                <textarea name="" id="task-description2" rows="3" class="of__desc" placeholder="Descrição"></textarea>
                             </div>
                             <div class="ofertas__price">
-                                <input type="text" id="task-price" class="of__price" placeholder="Valor">
-                                <button id="btn-task-form" class="of__button">Salvar</button>
+                                <input type="text" id="task-price2" class="of__price" placeholder="Valor">
+                                <select id="select-cat" name="colours" data-js="list-box" class="of__select"></select>
+                                <button id="btn-task-form2" class="of__button2">Salvar</button>
                             </div>
                         </div>
                     </form>                
                 </div>
     
-                <input id="imagem-url" class="imagem__url"></input>
+                <input id="imagem-url2" class="imagem__url"></input>
                 <img src="" alt="" id="image-display">
-                <h2 class="ofertas__title">Ofertas</h2>
+                <h2 class="ofertas__title">Loja</h2>
+                
                 <div class="tasks">
-                    <div class="tasks__container" id="tasks-container"></div>
+                    <div class="tasks__section">
+                        <div class="filtro">
+                            <select id="loja__cat" name="colours" data-js="list-box2" class="cat__select"></select>
+                            <button id="botao2" class="cat__all" >Mostrar tudo</button>
+                        </div>
+                        <div class="tasks__container" id="tasks-container2"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ======================================== CATEGORIAS ========================================-->
+            <section class="section__loja" id="section-categorias">
+                <div class="categoria">
+                    <h2 class="ofertas__title">Cadastrar Categorias</h2>
+                    <div class="categoria__container">                        
+
+                        <form data-js="add-game-form" class="cat__form">
+                            <div>
+                                <!-- <label for="title" class="form__label">Nome</label> -->
+                                <input class="cat__input" type="text" name="title" placeholder="Ex: Smartphones" required>
+                            </div>
+                            <button class="cat__button">Adicionar</button>
+                        </form>
+
+                        <h2 class="ofertas__title">Categorias</h2>
+
+                        <div class="tasks">
+                            <div class="tasks__section">
+                                <ul data-js="games-list" class="categories__list"></ul>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
 
@@ -149,59 +185,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <form id="task-form">
-        <div class="form__container">
-            
-            <div class="column2">
-                <img id="task-image" src="" alt="">
-                <input id="imagem-url" class="imagem__url"></input>
-                <input type="text" id="task-title" class="form__control" placeholder="Task Title">
-                <textarea name="" id="task-description" rows="3" placeholder="Task Description"></textarea>
-                <input type="text" id="task-price" class="form__control" placeholder="Task Price">
-                <button id="btn-task-form" class="task__button">Save</button>
-            </div>
-            <div class="column3">
-                <img class="image__display" id="image-display" src="" alt="">
-            </div>
-            
-        </div>
-    </form>
-
-    <div class="column3" style="margin-top: 50px;">
-        <input type="file" name="" id="select-img">
-        <button id="upload-img">Upload</button>
-        <div class="progress-bar" id="upload-progress"></div>
-        
-        <img id="imagem-url2" src="" alt="">
-    </div>
-
-    <button id="btn-logout" class="logout">LOGOUT</button>  
-    
-    <h1>Hello World</h1>
-
-    <div class="tasks__container" id="tasks-container"></div>
-
-
-    <div id="body"></div> -->
 
 
 
