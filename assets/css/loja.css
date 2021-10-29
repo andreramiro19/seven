@@ -1,6 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --orange: #FF9E71;
+    --white: #FFFFFF;
+    --grey: #F5F5F5;
+    --black1: #222;
+    --black2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.loja-seven__title {
+    color: var(--orange);
+}
+
+.tasks {
+    
+}
+
 .loja-seven__container {
-    margin-top: 100px;
-    background: gainsboro;
+    margin-top: 80px;
+    background: var(--);
     height: 800px;
     padding: 20px 100px;
 }
