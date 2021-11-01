@@ -34,38 +34,12 @@
                     <a href="index.html">Seven Tecnologia</a>
                 </div>
                 <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i> Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#ofertas" class="nav__link">
-                                <i class="uil uil-tag-alt nav__icon"></i> Ofertas
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#loja" class="nav__link">
-                                <i class="uil uil-store nav__icon"></i> Loja
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#sobre" class="nav__link">
-                                <i class="uil uil-user nav__icon" ></i> Sobre
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#servicos" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon" ></i> Serviços
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contato" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i> Contato
-                            </a>
-                        </li>
-                    </ul>
+                    <div id="category-menu-header">
+                        <div class="category__all">
+                            <a href="" id="category__all" class="category__btn">Todos</a>
+                        </div>
+                        <ul data-js="category-list" class="category__list"></ul>
+                    </div>                    
                     <i class="uil uil-times nav__close" id="nav-close"></i>
                 </div>
 
@@ -87,10 +61,14 @@
                     <div class="loja-seven__title">
                         <h1>Nossa Loja</h1>
                     </div>
-                    <div class="categories">
-                        <ul data-js="category-list" class="category__list"></ul>
-                        <a href="" id="category__all" class="category__btn">Todos</a>
-                    </div>                                    
+                    <div id="category-menu-body">
+                        <div class="category__all">
+                            <a href="" id="category__all" class="category__btn">Todos</a>
+                        </div>
+                        <div class="categories">
+                            <ul data-js="category-list" class="category__list"></ul>
+                        </div> 
+                    </div>                                                       
                     <div class="shop">
                         <div class="tasks__container" id="tasks-container">
                             <ul data-js="shop-list" class="shop__list"></ul>

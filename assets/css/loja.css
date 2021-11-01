@@ -43,23 +43,32 @@ body {
     padding: 20px 100px;
 }
 
-.categories {
+.category__list {
     display: flex;
-    overflow: auto;
-    padding: 10px;
+    justify-content: center;
+    overflow: hidden;
 }
 
-ul.category__list {
+ul.category__list, ul.category__list__header {
     display: flex;
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    flex-flow: row wrap;
+}
+
+.category__all {
+    display: flex;
+    justify-content: center;
 }
 
 .category__btn {
     width: 130px;
     height: 36px;
     padding: 10px;
-    margin-left: 10px;
     background: var(--orange);
     border: none;
     border-radius: 20px;
@@ -79,6 +88,12 @@ ul.category__list {
     .loja-seven__title {
         display: grid;
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    ul.category__list__header {
+        
     }
 }
 
@@ -109,7 +124,7 @@ ul.category__list {
     border-radius: 15px 15px 0px 0px;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 216px;
 }
 
 .swiper__card__img {
@@ -121,7 +136,7 @@ ul.category__list {
 
 .swiper__card__data {
     display: grid;
-    width: 100%;
+    width: auto;
     height: 100%;
     grid-template-rows: .7fr 2fr;
     margin: 10px;

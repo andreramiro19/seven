@@ -1,6 +1,23 @@
 const db = firebase.firestore();
 const shopList = document.querySelector('[data-js="shop-list"]');
 
+/* ==================== show/hide catagory menu ==================== */
+let catMenuHead = document.getElementById('category-menu-header');
+let catMenuBody = document.getElementById('category-menu-body');
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    catMenuBody.parentNode.removeChild(catMenuBody)
+  } else {
+    catMenuHead.parentNode.removeChild(catMenuHead)
+  }
+}
+
+var x = window.matchMedia("(max-width: 992px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+/* ==================== Loja ==================== */
 db.collection('loja').onSnapshot(snapshot => {
     const shopLis = snapshot.docs.reduce((acc, doc) => {
         const { img, title, description, price } = doc.data()
@@ -26,13 +43,14 @@ db.collection('loja').onSnapshot(snapshot => {
     shopList.innerHTML = shopLis
     })
 
+/* ==================== Categorias ==================== */
 const categoryList = document.querySelector('[data-js="category-list"]');
 
 db.collection('categories').onSnapshot(snapshot => {
     const categoryLis = snapshot.docs.reduce((acc, doc) => {
         const { title } = doc.data()
-        acc += `<li data-id="${doc.id}" class="category__btn">
-        <a href="#">${title}</a>
+        acc += `<li data-id="${doc.id}">
+        <button class="category__btn">${title}</button>
         </li>`
 
         return acc
@@ -101,3 +119,4 @@ btnAll.addEventListener('click', () => {
         shopList.innerHTML = shopLis
         })
 })
+
