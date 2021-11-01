@@ -44,7 +44,7 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#loja" class="nav__link">
+                            <a href="loja.html" class="nav__link">
                                 <i class="uil uil-store nav__icon"></i> Loja
                             </a>
                         </li>
@@ -121,7 +121,7 @@
                 <div class="ofertas123">
                     <div class="ofertas__container">
                         <!--==================== Card 1 ====================-->
-                        <div class="card__ofertas card1">
+                        <!-- <div class="card__ofertas card1">
                             <div class="card__img">
                                 <img src="assets/img/iphone.png" alt="iPhone">
                             </div>
@@ -137,82 +137,14 @@
                                 <p class="card__description">iPhone XR Apple 64GB Prata 6,1” 12MP iOS</p>
                                 <span class="card__price">R$2.699,90</span>
                             </div>
-                        </div>
+                        </div> -->
                         <!--==================== Card 2 ====================-->
-                        <div class="card__ofertas card2">
-                            <div class="card__img">
-                                <img src="assets/img/Xiaomi.png" alt="iPhone">
-                            </div>
-                            <div class="card__stars">
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                            </div>
-                            <div class="card__data">
-                                <h1 class="card__title">Xiaomi mi9 lite</h1>
-                                <p class="card__description">iPhone XR Apple 64GB Prata 6,1” 12MP iOS</p>
-                                <span class="card__price">R$899,90</span>
-                            </div>
-                        </div>
-                        <!--==================== Card 3 ====================-->
-                        <div class="card__ofertas card3">
-                            <div class="card__img">
-                                <img src="assets/img/Samsung.png" alt="iPhone">
-                            </div>
-                            <div class="card__stars">
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                            </div>
-                            <div class="card__data">
-                                <h1 class="card__title">Samsung Galaxy s10</h1>
-                                <p class="card__description">iPhone XR Apple 64GB Prata 6,1” 12MP iOS</p>
-                                <span class="card__price">R$4.499,90</span>
-                            </div>
-                        </div>
-                        <!--==================== Card 4 ====================-->
-                        <div class="card__ofertas card3">
-                            <div class="card__img">
-                                <img src="assets/img/iphone.png" alt="iPhone">
-                            </div>
-                            <div class="card__stars">
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                            </div>
-                            <div class="card__data">
-                                <h1 class="card__title">Iphone 8 16g</h1>
-                                <p class="card__description">iPhone XR Apple 64GB Prata 6,1” 12MP iOS</p>
-                                <span class="card__price">R$4.499,90</span>
-                            </div>
-                        </div>
-                        <!--==================== Card 5 ====================-->
-                        <div class="card__ofertas card3">
-                            <div class="card__img">
-                                <img src="assets/img/Xiaomi.png" alt="iPhone">
-                            </div>
-                            <div class="card__stars">
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                                <i class="star uil uil-star"></i>
-                            </div>
-                            <div class="card__data">
-                                <h1 class="card__title">Samsung Galaxy s10</h1>
-                                <p class="card__description">iPhone XR Apple 64GB Prata 6,1” 12MP iOS</p>
-                                <span class="card__price">R$4.499,90</span>
-                            </div>
-                        </div>
+                        <ul data-js="ofertas-list" class="ofertas__list"></ul>
                     </div>
                 </div>
             </section>
+
+            
 
             <!--============================================================================= LOJA =============================================================================-->
             <section class="loja__section" id="loja">
@@ -483,8 +415,13 @@
         <script src="assets/js/scroll-reveal.js"></script>
 
         <!--============================= FIREBASE =============================-->
-        <script type="module" src="assets/js/firebase.js"></script>
-        <script src="assets/js/image.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+
+        <script src="assets/js/firebase.js"></script>
+        <script src="assets/js/index.js"></script>
 
     </body>
 </html>

@@ -1,6 +1,3 @@
-const db = firebase.firestore();
-const shopList = document.querySelector('[data-js="shop-list"]');
-
 /* ==================== show/hide catagory menu ==================== */
 let catMenuHead = document.getElementById('category-menu-header');
 let catMenuBody = document.getElementById('category-menu-body');
@@ -18,6 +15,9 @@ myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes
 
 /* ==================== Loja ==================== */
+const db = firebase.firestore();
+const shopList = document.querySelector('[data-js="shop-list"]');
+
 db.collection('loja').onSnapshot(snapshot => {
     const shopLis = snapshot.docs.reduce((acc, doc) => {
         const { img, title, description, price } = doc.data()
