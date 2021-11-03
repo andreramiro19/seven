@@ -610,6 +610,9 @@ botao2.addEventListener('click', () => {
                     var idid = e.target.dataset.id
                     var docRef = db.collection("loja").doc(idid);
 
+                    console.log("TESTANDO: ");
+                    console.log("TESTANDO: " + docRef);
+
                     docRef.get().then((doc) => {
                         if (doc.exists) {
                             var data = doc.data();

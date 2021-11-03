@@ -22,26 +22,64 @@ db.collection('loja').onSnapshot(snapshot => {
     const shopLis = snapshot.docs.reduce((acc, doc) => {
         const { img, title, description, price } = doc.data()
         acc += `
-        <li data-id="${doc.id}">
-            <div class="swiper__card">
-                <div class="swiper__card__top">
-                    <img src=${img} class="swiper__card__img"></img>
+        <li class="pato" data-id="${doc.id}">
+            <div class="swiper__card" id="swiper-card" data-id="${doc.id}">
+                <div class="swiper__card__top" data-id="${doc.id}">
+                    <img src=${img} class="swiper__card__img" data-id="${doc.id}"></img>
                 </div>
-                <div class="swiper__card__data">
-                    <div class="swiper__data__title">${title}</div>
-                    <div class="swiper__data__desc">${description}</div>
+                <div class="swiper__card__data" data-id="${doc.id}">
+                    <div class="swiper__data__title" data-id="${doc.id}">${title}</div>
+                    <div class="swiper__data__desc" data-id="${doc.id}">${description}</div>
                 </div>
-                <div class="swiper__card__price">
-                    <div class="swiper__price">${price}</div>
+                <div class="swiper__card__price" data-id="${doc.id}">
+                    <div class="swiper__price" data-id="${doc.id}">${price}</div>
                 </div>
             </div>
         </li>`
+
+        console.log(doc.id)
 
         return acc
     }, '')
 
     shopList.innerHTML = shopLis
+
+    const swiperCard = document.querySelectorAll('.pato');
+        swiperCard.forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+
+                    const getTask2 = (id) => db.collection('loja').doc(id).get();
+
+                    const doc = await getTask2(e.target.dataset.id);
+
+                    const { title, description } = doc.data()
+
+                    var pato = "Gostaria de comprar o " + title + description
+
+                    window.open('https://wa.me/5535988911129?text=' + pato);
+                    
+
+                })
+            });
     })
+
+// /* ========== Card Click ========== */
+// const swiperCard = document.getElementById("swiper-card");
+
+// swiperCard.addEventListener('click', () => {
+//     window.InputEvent = window.Event || window.InputEvent;
+
+//     var event = new InputEvent('input', {
+//         bubbles: true
+//     });
+
+//     var textbox = document.querySelector('div._2S1VP');
+
+//     textbox.textContent = message;
+//     textbox.dispatchEvent(event);
+
+//     document.querySelector("button._35EW6").click();
+// })
 
 /* ==================== Categorias ==================== */
 const categoryList = document.querySelector('[data-js="category-list"]');
