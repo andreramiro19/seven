@@ -87,6 +87,12 @@ ul.category__list, ul.category__list__header {
     grid-template-columns: 0;
 }
 
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer__socials {
     display: flex;
     justify-content: flex-start;
