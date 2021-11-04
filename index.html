@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Descrição sobre a Seven Tecnologia bem aqui">
 
         <!--============================= UNICONS =============================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
@@ -19,9 +20,12 @@
         <link rel="stylesheet" href="assets/css/normalize.css">
 
         <!--============================= CSS =============================-->
-        <link rel="stylesheet" href="assets/css/styles3.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Seven</title>
+        <!--============================= FAVICON =============================-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <title>Seven Tecnologia - </title>
     </head>
     <body>
         <!--============================================================================= HEADER =============================================================================-->        
@@ -95,8 +99,8 @@
                 </div>
 
                     <div class="home__info">
-                        <h1 class="home__title">Seu novo aparelho está aqui</h1>
-                        <h3 class="home__subtitle">Monte seu pc novo com a gente, também temos os melhores preços em tablets e celulares</h3>
+                        <h1 class="home__title">Seven Tecnologia</h1>
+                        <h2 class="home__subtitle">Seu novo aparelho está aqui, monte seu pc novo com a gente, também temos os melhores preços em tablets e celulares</h2>
                     </div>
                     <div class="home__media">
                         <lottie-player class="home__img" src="https://assets5.lottiefiles.com/private_files/lf30_2u9Zt5.json" background="transparent" speed="1" loop autoplay></lottie-player>
@@ -145,7 +149,7 @@
                         <i class="uil uil-angle-left-b swiper__icon__prev"></i>
                     </div>
                     <div class="ver__mais__btn">
-                        <a href="loja.html" class="ver__mais">Ver mais +</a>
+                        <a href="loja.html" class="ver__mais">Ir pra loja +</a>
                     </div>
                 </div>
             </section>
@@ -156,11 +160,11 @@
                 <div class="sobre__bg">
                     <div class="sobre__container">
                         <div class="sobre__info">
-                            <h1 class="info__title">Sobre nós</h1>
+                            <h2 class="info__title">Sobre nós</h2>
                             <span class="info__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis libero eveniet harum corporis fugiat alias id ut distinctio rerum accusantium consectetur ipsam vitae ullam nam excepturi dolor veritatis, dolorem doloribus.</span>
                         </div>
                         <div class="sobre__img">
-                            <img src="assets/img/undraw6.svg" alt="Sobre Imagem">
+                            <img src="assets/img/undraw6.svg" alt="Imagem sobre nós">
                         </div>
                     </div>
                 </div>
@@ -171,10 +175,10 @@
                 <div class="servicos__bg">
                     <div class="servicos__container">
                         <div class="servicos__img">
-                            <img src="assets/img/undraw5.svg" alt="Serviços Imagem">
+                            <img src="assets/img/undraw5.svg" alt="Imagem serviços: Informática, Celulares, Acessórios, Impressão e Xerox, Plastificação, Assistência técnica especializada">
                         </div>
                         <div class="servicos__data">
-                            <h1 class="data__title">Nossos serviços</h1>
+                            <h2 class="data__title">Nossos serviços</h2>
                             <span class="data__desc">Informática<br>Celulares<br>Acessórios<br>Impressão e Xerox<br>Plastificação<br>Assistência técnica especializada</span>
                         </div>
                     </div>
@@ -190,8 +194,8 @@
                             <i class="uil uil-phone contact__icon"></i>
 
                             <div>
-                                <h3 class="contact__title1">Call Me</h3>
-                                <span class="contact__subtitle">+5535988911129</span>
+                                <h3 class="contact__title1">Ligar</h3>
+                                <a class="contact__subtitle" href="http://wa.me/+5535992345682">+5535992345682</a>
                             </div>
                         </div>
 
@@ -200,7 +204,7 @@
 
                             <div>
                                 <h3 class="contact__title1">Email</h3>
-                                <span class="contact__subtitle">andreramiroapp@gmail.com</span>
+                                <a class="contact__subtitle" href="mailto:seventecnologia21@gmail.com">seventecnologia21@gmail.com</a>
                             </div>
                         </div>
 
@@ -208,39 +212,42 @@
                             <i class="uil uil-map-marker contact__icon"></i>
 
                             <div>
-                                <h3 class="contact__title1">Location</h3>
-                                <span class="contact__subtitle">Brazil - Minas Gerais - Rua Izabel Bernardina de Jesus #187</span>
+                                <h3 class="contact__title1">Endereço</h3>
+                                <a class="contact__subtitle" href="https://goo.gl/maps/qhLKuWif76c15Etf7">MG - Travessa Plínio Salgado #29 - Centro</a>                               
                             </div>
                         </div>
                     </div>
 
-                    <form action="" class="contact__form grid">
+                    <form action="https://api.staticforms.xyz/submit" method="post" class="contact__form grid">
+                        <input type="hidden" name="accessKey" value="ae621a92-fd25-464b-a85c-e25693c8c30c">
+                        <input type="hidden" name="redirectTo" value="">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <label for="" class="contact__label">Nome</label>
+                                <input type="text" class="contact__input" name="name">
                             </div>
                             <div class="contact__content">
                                 <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <input type="email" class="contact__input" name="email">
                             </div>
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Project</label>
-                            <input type="text" class="contact__input">
+                            <label for="" class="contact__label">Assunto</label>
+                            <input type="text" class="contact__input" name="subject">
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                            <label for="" class="contact__label">Mensagem</label>
+                            <textarea id="" cols="0" rows="7" class="contact__input" name="message"></textarea>
                         </div>
 
                         <div>
-                            <a href="#" class="contact__button">
+                            <button class="contact__button">
                                 Enviar
                                 <i class="uil uil-message button__icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </form>
+
                 </div>
             </section>
         </main>
@@ -249,7 +256,7 @@
             <div class="footer__bg">
                 <div class="footer__container container grid">
                     <div class="footer__info">
-                        <h1 class="footer__title">Seven</h1>
+                        <h3 class="footer__title">Seven</h3>
                         <p class="footer__subtitle">Tecnologia</p>
                     </div>
 
@@ -288,6 +295,10 @@
         <a href="#" class="scrollup" id="scroll-up">
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
+
+        <!--============================= SWIPER JS =============================-->        
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="assets/js/swiper.js"></script>    
         
         <!--============================= MAIN JS =============================-->
         <script src="assets/js/main.js"></script>
@@ -305,12 +316,9 @@
         <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
 
+        <!--============================= SCRIPTS =============================-->
         <script src="assets/js/firebase.js"></script>
         <script src="assets/js/index.js"></script>
-
-        <!--============================= SWIPER JS =============================-->        
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script src="assets/js/swiper.js"></script>     
 
     </body>
 </html>

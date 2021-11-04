@@ -31,11 +31,9 @@ body {
 
 .swiper-slide {
     background: #FFFFFF;
-    /* box-shadow: 2px 2px 10px rgb(0 0 0 / 25%); */
     border-radius: 20px;
     width: 230px;
     height: 360px;
-
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;

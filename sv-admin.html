@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,12 +37,7 @@
             <i></i>
         </div>
         <a href="index.html" class="voltar">Ir para a página principal.</a>
-
-        <!-- <br><br>
-        <button id="btn-logout">Logout</button> -->
     </div>
-
-
 
     <!--============================= FIREBASE =============================-->
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
@@ -50,12 +45,14 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
     <script src="assets/js/firebase.js"></script>
+
+    <!--============================= SCRIPTS =============================-->
     <script src="assets/js/login.js"></script>
 
     <script>
         firebase.auth().signOut().then(() => {
         // Sign-out successful.
-        alert("você se deslogou")
+        console.log("usuário fez logout")
       }).catch((error) => {
         // An error happened.
       });
@@ -64,11 +61,9 @@
     <script>
         firebase.auth().onAuthStateChanged( (user) => {
             if(user) {
-                alert("VOCE ESTÁ LOGADO!")
                 window.location.href = "seven-admin.html"
             }
             else {
-                alert("nao sei mais o q ta acontecendo aqui")
             }
         })
     </script>

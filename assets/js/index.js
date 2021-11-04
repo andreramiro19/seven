@@ -53,7 +53,7 @@ db.collection('ofertas').onSnapshot(snapshot => {
 /*==================== Loja ====================*/
 const shopList2 = document.querySelector('[data-js="loja-list"]');
 
-db.collection('loja').orderBy("title").limit(6).onSnapshot(snapshot => {
+db.collection('loja').orderBy("title").limit(8).onSnapshot(snapshot => {
     const shopLis2 = snapshot.docs.reduce((acc, doc) => {
         const { img, title, description, price } = doc.data()
         acc += `

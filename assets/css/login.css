@@ -71,13 +71,11 @@ color: #747474;
     position: absolute;
     color: #E68555;
     right: 20px;
-
 }
 
 .login__container button {
     width: 280px;
     height: 52px;
-
     background: #E68555;
     border-radius: 10px;
     border: none;
