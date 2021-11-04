@@ -1,103 +1,3 @@
-// const db = firebase.firestore();
-// var storage = firebase.storage();
-
-// const taskForm = document.getElementById('task-form');
-// const taskContainer = document.getElementById('tasks-container');
-
-// let editStatus = false;
-// let id = ''
-
-// const saveTask = (title, description, price) => 
-//     db.collection('tasks').doc().set( {
-//         title,
-//         description,
-//         price
-//     })
-
-// const getTasks = () => db.collection('tasks').get();
-
-// const getTask = (id) => db.collection('tasks').doc(id).get();
-
-// const onGetTasks = (callback) => db.collection('tasks').onSnapshot(callback);
-
-// const deleteTask = id => db.collection('tasks').doc(id).delete();
-
-// const updateTask = (id, updatedTask) => db.collection('tasks').doc(id).update(updatedTask);
-
-// window.addEventListener('DOMContentLoaded', async (e) => {
-
-//     onGetTasks((querySnapshot) => {
-//         taskContainer.innerHTML = ''
-//         querySnapshot.forEach((doc) => {
-    
-//             const task = doc.data();
-//             task.id = doc.id;
-    
-//             taskContainer.innerHTML += `<div>            
-//             <h3>${task.title}</h3>
-//             <p>${task.description}</p>
-//             <p>${task.price}</p>
-//             <button class="btn-delete" data-id="${task.id}">Delete</button>
-//             <button class="btn-edit" data-id="${task.id}">Edit</button>
-//             </div>`;
-
-//             const btnsDelete = document.querySelectorAll('.btn-delete');
-//             btnsDelete.forEach(btn => {
-//                 btn.addEventListener('click', async (e) => {
-//                     await deleteTask(e.target.dataset.id);
-//                 })
-//             });
-
-//             const btnsEdit = document.querySelectorAll('.btn-edit');
-//             btnsEdit.forEach(btn => {
-//                 btn.addEventListener('click', async (e) => {
-//                     const doc = await getTask(e.target.dataset.id);
-//                     const task = doc.data();
-
-//                     editStatus = true;
-//                     id = doc.id;
-
-//                     taskForm['task-title'].value = task.title;
-//                     taskForm['task-description'].value = task.description;
-//                     taskForm['task-price'].value = task.price;
-//                     taskForm['btn-task-form'].innerText = 'Update'
-
-//                 })
-//             });
-
-//         })
-//     })
-    
-// })
-
-// taskForm.addEventListener('submit', async (e) => {
-//     e.preventDefault();
-
-//     const title = taskForm['task-title'];
-//     const description = taskForm['task-description'];
-//     const price = taskForm['task-price'];
-
-//     if (!editStatus) {
-//         await saveTask(title.value, description.value, price.value);
-//     }
-//     else {
-//         await updateTask(id, {
-//             title: title.value,
-//             description: description.value,
-//             price: price.value
-//         });
-
-//         editStatus = false;
-//         id = '';
-//         taskForm['btn-task-form'].innerText = 'Save';
-//     }
-
-//     await getTasks();
-
-//     taskForm.reset();
-//     title.focus();
-// })
-
 /*==================== Ofertas ====================*/
 const db = firebase.firestore();
 const shopList = document.querySelector('[data-js="ofertas-list"]');
@@ -106,22 +6,22 @@ db.collection('ofertas').onSnapshot(snapshot => {
     const shopLis = snapshot.docs.reduce((acc, doc) => {
         const { img, title, description, price } = doc.data()
         acc += `
-        <li data-id="${doc.id}">
-            <div class="card__ofertas card1">
-                <div class="card__img">
-                    <img src=${img} alt="Imagem do produto">
+        <li class="ofertas__card" data-id="${doc.id}">
+            <div class="card__ofertas card1" data-id="${doc.id}">
+                <div class="card__img" data-id="${doc.id}">
+                    <img src=${img} alt="Imagem do produto" data-id="${doc.id}">
                 </div>
-                <div class="card__stars">
+                <div class="card__stars" data-id="${doc.id}">
                     <i class="star uil uil-star"></i>
                     <i class="star uil uil-star"></i>
                     <i class="star uil uil-star"></i>
                     <i class="star uil uil-star"></i>
                     <i class="star uil uil-star"></i>
                 </div>
-                <div class="card__data">
-                    <h1 class="card__title">${title}</h1>
-                    <p class="card__description">${description}</p>
-                    <span class="card__price">${price}</span>
+                <div class="card__data" data-id="${doc.id}">
+                    <h1 class="card__title" data-id="${doc.id}">${title}</h1>
+                    <p class="card__description" data-id="${doc.id}">${description}</p>
+                    <span class="card__price" data-id="${doc.id}">${price}</span>
                 </div>
             </div>
         </li>`
@@ -130,4 +30,51 @@ db.collection('ofertas').onSnapshot(snapshot => {
     }, '')
 
     shopList.innerHTML = shopLis
+
+    const ofertasCard = document.querySelectorAll('.ofertas__card');
+        ofertasCard.forEach(btn => {
+                btn.addEventListener('click', async (e) => {
+
+                    const getTask2 = (id) => db.collection('ofertas').doc(id).get();
+
+                    const doc = await getTask2(e.target.dataset.id);
+
+                    const { title, description } = doc.data()
+
+                    var pato = "Gostaria de comprar o " + title + description
+
+                    window.open('https://wa.me/5535988911129?text=' + pato);
+                    
+
+                })
+            });
+    })
+
+/*==================== Loja ====================*/
+const shopList2 = document.querySelector('[data-js="loja-list"]');
+
+db.collection('loja').orderBy("title").limit(6).onSnapshot(snapshot => {
+    const shopLis2 = snapshot.docs.reduce((acc, doc) => {
+        const { img, title, description, price } = doc.data()
+        acc += `
+        <div class="swiper-slide" data-id="${doc.id}">
+            <div class="swiper__card" id="swiper-card" data-id="${doc.id}">
+                <div class="swiper__card__top" data-id="${doc.id}">
+                    <img src=${img} class="swiper__card__img" data-id="${doc.id}"></img>
+                </div>
+                <div class="swiper__card__data" data-id="${doc.id}">
+                    <div class="swiper__data__title" data-id="${doc.id}">${title}</div>
+                    <div class="swiper__data__desc" data-id="${doc.id}">${description}</div>
+                </div>
+                <div class="swiper__card__price" data-id="${doc.id}">
+                    <div class="swiper__price" data-id="${doc.id}">${price}</div>
+                </div>
+            </div>
+        </div>
+        `
+
+        return acc
+    }, '')
+
+    shopList2.innerHTML = shopLis2
     })

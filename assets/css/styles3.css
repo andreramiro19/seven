@@ -149,7 +149,7 @@ a {
     
     /* Active menu */
     .active-link{
-        color: #0a3b72;
+        color: #0cb5b9;
     }
     
     /* Change background header */
@@ -457,9 +457,8 @@ a {
 }
 
 /*============================================================ OFERTAS ============================================================*/
-.ofertas__section {
-    display: grid;
-    margin-top: 100px;
+.ofertas__id {
+    height: 140px;
 }
 
 .ofertas__title {
@@ -471,33 +470,13 @@ a {
     display: grid;
 }
 
-/* .ofertas__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
-    grid-auto-rows: 300px;
-    gap: 1.5rem;
-    row-gap: 120px;
-    padding-top: 20px;
-    justify-content: center;
-    align-content: center;
-    align-items: stretch;
-} */
+.ofertas__card {
+    cursor: pointer;
+}
 
 .ofertas__container {
     width: 100%;
 }
-
-/* .ofertas__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 240px));
-    grid-auto-rows: 300px;
-    gap: 1.5rem;
-    row-gap: 120px;
-    padding-top: 20px;
-    justify-content: center;
-    align-content: center;
-    align-items: stretch;
-} */
 
 .ofertas__list {
     display: flex;

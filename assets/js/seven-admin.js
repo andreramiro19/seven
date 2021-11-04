@@ -440,7 +440,6 @@ gamesList.addEventListener('click', e => {
             .catch(e => {
                 console.log("Erro ao remover a categoria: ", e.message)
             })
-        
     }
 })
 
@@ -473,12 +472,6 @@ db.collection('categories').onSnapshot(snapshot => {
 
     listBox2.innerHTML = boxLis
     })
-
-
-
-
-
-
 
 const botao = document.getElementById('loja__cat');
 
@@ -671,105 +664,3 @@ botao2.addEventListener('click', () => {
             });
         })
 })
-
-// const botao = document.getElementById('botao');
-
-// botao.addEventListener('click', () => {
-
-// const onGetTasks2 = (callback) => db.collection('loja').where('category', '==', listBox2.value).onSnapshot(callback);
-
-// window.addEventListener('DOMContentLoaded', async (e) => {
-
-//     onGetTasks2((querySnapshot) => {
-//         taskContainer2.innerHTML = ''
-//         querySnapshot.forEach((doc) => {
-    
-//             const task = doc.data();
-//             task.id = doc.id;
-    
-//             taskContainer2.innerHTML += `<tr class="tr">
-//             <div class="task__card">
-//             <div class="task__img">
-//             <img class="tk__img" src="${task.img}"></img>
-//             </div>
-//             <div class="task__data">
-//             <h3 class="tk__title">${task.title}</h3>
-//             <p class="tk__desc">${task.description}</p>
-//             <p class="tk__category"">${task.category}</p>
-//             <p class="tk__price">${task.price}</p>
-//             </div>
-//             <div class="task__btns">
-//             <button class="btn-edit" data-id="${task.id}">Editar</button>
-//             <button class="btn-delete" data-id="${task.id}">Deletar</button>
-//             </div>
-//             </div>
-//             </tr>`;
-
-//             const btnsDelete = document.querySelectorAll('.btn-delete');
-//             btnsDelete.forEach(btn => {
-//                 btn.addEventListener('click', async (e) => {
-//                     var idid = e.target.dataset.id
-//                     var docRef = db.collection("loja").doc(idid);
-
-//                     docRef.get().then((doc) => {
-//                         if (doc.exists) {
-//                             var data = doc.data();
-//                             var porco = data.img;
-//                             console.log("A URL DA IMAGEM É: " + porco);
-
-//                             var fileUrl = porco;
-            
-//                             var storage = firebase.storage();
-//                                 // Create a reference to the file to delete
-//                                 var fileRef = storage.refFromURL(fileUrl);        
-                                
-//                                 // Delete the file using the delete() method 
-//                                 fileRef.delete().then(function () {
-                                
-//                                     // File deleted successfully
-//                                     console.log("File Deleted")
-//                                     deleteTask2(e.target.dataset.id);
-//                                 }).catch(function (error) {
-//                                     // Some Error occurred
-                                    
-//                                 });
-
-                                
-//                         } else {
-//                             // doc.data() will be undefined in this case
-//                             console.log("No such document!");
-//                             deleteTask2(e.target.dataset.id);
-//                         }
-
-//                     }).catch((error) => {
-//                         console.log("Error getting document:", error);
-//                         deleteTask2(e.target.dataset.id);
-//                     });
-                                     
-//                 })
-  
-//             });
-
-//             const btnsEdit = document.querySelectorAll('.btn-edit');
-//             btnsEdit.forEach(btn => {
-//                 btn.addEventListener('click', async (e) => {
-//                     const doc = await getTask2(e.target.dataset.id);
-//                     const task = doc.data();
-
-//                     editStatus2 = true;
-//                     id = doc.id;
-
-//                     taskForm2['task-title2'].value = task.title;
-//                     taskForm2['task-description2'].value = task.description;
-//                     taskForm2['task-price2'].value = task.price;
-//                     taskForm2['select-cat'].value = task.category;
-//                     taskForm2['btn-task-form2'].innerText = 'Atualizar'
-
-//                 })
-//             });
-
-//         })
-//     })
-// })
-//     console.log('nao deu')
-// })
